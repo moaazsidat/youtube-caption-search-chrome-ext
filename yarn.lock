@@ -1153,6 +1153,10 @@ chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+child_process@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/child_process/-/child_process-1.0.2.tgz#b1f7e7fc73d25e7fd1d455adc94e143830182b5a"
+
 chokidar@^1.4.3, chokidar@^1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
@@ -1167,6 +1171,10 @@ chokidar@^1.4.3, chokidar@^1.6.0:
     readdirp "^2.0.0"
   optionalDependencies:
     fsevents "^1.0.0"
+
+chrome-fs@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/chrome-fs/-/chrome-fs-10.0.0.tgz#768561b062892bdf48521670f5f7446fc7060a2f"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1:
   version "1.0.3"
@@ -2689,6 +2697,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+net@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/net/-/net-1.0.2.tgz#d1757ec9a7fb2371d83cf4755ce3e27e10829388"
+
 no-case@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.0.tgz#ca2825ccb76b18e6f79d573dcfbf1eace33dd164"
@@ -3519,7 +3531,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@2.x, request@^2.69.0:
+request@2.x, request@^2.72.0:
   version "2.75.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.75.0.tgz#d2b8268a286da13eaa5d01adf5d18cc90f657d93"
   dependencies:
@@ -3776,7 +3788,7 @@ stream-http@^2.3.1:
     to-arraybuffer "^1.0.0"
     xtend "^4.0.0"
 
-streamify@~0.2.3:
+streamify@~0.2.5:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/streamify/-/streamify-0.2.8.tgz#aa8133ecf41f72073dc956111ef23bae1cd0fbad"
   dependencies:
@@ -3880,6 +3892,10 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tls@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/tls/-/tls-0.0.1.tgz#0ab2bf5968d71df2f8c0e1515d24a2240b98aac8"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -4231,10 +4247,10 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youtube-dl@^1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/youtube-dl/-/youtube-dl-1.11.1.tgz#c8e3b74951182dc5c58a0d1cd5be54b356271bd2"
+"youtube-dl@git+https://github.com/moaazsidat/node-youtube-dl.git":
+  version "1.11.2"
+  resolved "git+https://github.com/moaazsidat/node-youtube-dl.git#bffb04e0fef2b41cf5fc5d52a46b0adb3b8be767"
   dependencies:
     mkdirp "^0.5.1"
-    request "^2.69.0"
-    streamify "~0.2.3"
+    request "^2.72.0"
+    streamify "~0.2.5"

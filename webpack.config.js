@@ -26,6 +26,10 @@ var options = {
     path: path.join(__dirname, "build"),
     filename: "[name].bundle.js"
   },
+  node: {
+    fs: 'empty',
+    child_process: 'empty'
+  },
   module: {
     rules: [
       {

@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+// import { loadCaptions, search } from './utils';
 import "../css/popup.css";
+
+/*
+Problem: 
+because of the way chrome blocks fs and doesn't let you
+interact with the python process, it's not possible to 
+do this neatly, going to explore setting up a linux instance
+and build and api around it and talk to it via the extension
+*/
 
 function getQueryParams(url) {
   var vars = [], hash;
@@ -15,7 +24,7 @@ function getQueryParams(url) {
 
 function secondsToHHMMSS(seconds) {
   var date = new Date(null);
-  date.setSeconds(seconds); // specify value for SECONDS here
+  date.setSeconds(seconds); // specify value for SECONDS herelo
   return date.toISOString().substr(11, 8);
 }
 
@@ -83,14 +92,6 @@ class Search extends Component {
   }
 }
 
-function search(term) {
-  return [
-    {start: '10000', end: '20', part: 'hello world'},
-    {start: '20000', end: '20', part: 'hello world 2'},
-    {start: '140000', end: '20', part: 'hello world 3'},
-  ]
-}
-
 class App extends Component {
   constructor() {
     super();
@@ -109,14 +110,19 @@ class App extends Component {
   getTabs = (tabs) => {
     var url = tabs[0] && tabs[0].url || '';
     var qParams = getQueryParams(url)
+    var videoId = qParams && qParams.v;
     this.setState({
       url: url,
-      videoId: qParams.v || '',
+      videoId: videoId || '',
     })
+    // if ((!url.length === 0) && (!url.indexOf('https://www.youtube.com/') === -1) && videoId) {
+    //   loadCaptions(this.state.videoId);
+    // } else {
+    //   console.log('not youtube video');
+    // }
   }
   componentDidMount() {
     console.log('componetDidMount')
-    var url = '';
     chrome.tabs.query({ currentWindow: true, active: true }, this.getTabs)
   }
   render() {
